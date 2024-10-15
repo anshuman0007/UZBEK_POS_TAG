@@ -1,0 +1,51 @@
+   Classification Report:   
+
+ precision    recall  f1-score   support
+
+           0       1.00      0.54      0.70      1195       
+           1       1.00      1.00      1.00      1964       
+           2       1.00      1.00      1.00      1776       
+           3       1.00      1.00      1.00       215       
+           4       1.00      1.00      1.00       532       
+           5       1.00      1.00      1.00       656       
+           6       1.00      1.00      1.00       649       
+           7       1.00      1.00      1.00      2067       
+           8       1.00      0.92      0.96      1026       
+           9       1.00      1.00      1.00      1130       
+          10       1.00      0.66      0.79      1565       
+          11       1.00      1.00      1.00      2053       
+          12       1.00      1.00      1.00        50       
+          13       1.00      0.56      0.71        27       
+          14       1.00      0.96      0.98      1890       
+          15       1.00      0.08      0.15        25       
+
+   micro avg       1.00      0.92      0.96     16820       
+   macro avg       1.00      0.86      0.89     16820       
+weighted avg       1.00      0.92      0.95     16820       
+ samples avg       1.00      0.92      0.95     16820
+
+
+
+
+Insights:
+Class Performance:
+
+Classes with 1.00 precision, recall, and F1-score (e.g., classes 1, 2, 3, 4, 5, 6, 7, 9, 11, 12, 14) indicate excellent performance. 
+The model accurately identifies these classes without any false positives or negatives.
+Classes with lower recall and F1-scores (e.g., classes 0, 10, 13, and 15) suggest that while precision is perfect, 
+the model struggles to identify all instances of these classes:
+Class 0: High precision but only 54% recall indicates that the model misses many actual instances.
+Class 15: Very low recall (8%) and F1-score (15%) suggest significant room for improvement.
+Micro, Macro, and Weighted Averages:
+
+Micro Average: 1.00 precision indicates perfect classification overall, but the recall of 0.92 suggests some classes are being missed.
+Macro Average: 1.00 precision is excellent, but a recall of 0.86 indicates that on average, the model has difficulties identifying all 
+classes equally.
+Weighted Average: 1.00 precision and a recall of 0.92 suggest the model performs well when accounting for class imbalance.
+Conclusion:
+Favorable Aspects: The model is highly effective for many classes, achieving perfect precision and strong F1-scores.
+Unfavorable Aspects: There are several classes (especially 0, 10, 13, and 15) where the model needs improvement in recall.
+ You might consider collecting more data for these classes, adjusting the model, or fine-tuning the parameters to improve 
+ overall performance.
+Overall, while the model performs well, focusing on the underperforming classes will lead to better overall accuracy 
+and usability in practical applications.
